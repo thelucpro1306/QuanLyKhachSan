@@ -54,8 +54,12 @@ namespace QuanLyKhachSan.PresentationTier
             this.btnPhong8 = new System.Windows.Forms.Button();
             this.btnPhong7 = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
+            this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.toolStrip1.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
             this.pnlSubMenu1.SuspendLayout();
             this.pnlSubMenu2.SuspendLayout();
             this.pnlSubMenu3.SuspendLayout();
@@ -132,6 +136,7 @@ namespace QuanLyKhachSan.PresentationTier
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.DarkCyan;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
@@ -169,6 +174,7 @@ namespace QuanLyKhachSan.PresentationTier
             // 
             // pnlLogo
             // 
+            this.pnlLogo.Controls.Add(this.monthCalendar1);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
@@ -413,11 +419,39 @@ namespace QuanLyKhachSan.PresentationTier
             this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHelp.UseVisualStyleBackColor = true;
             // 
+            // pnlChildForm
+            // 
+            this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChildForm.Location = new System.Drawing.Point(300, 57);
+            this.pnlChildForm.Name = "pnlChildForm";
+            this.pnlChildForm.Size = new System.Drawing.Size(1426, 938);
+            this.pnlChildForm.TabIndex = 7;
+            this.pnlChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChildForm_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(300, 995);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1426, 60);
+            this.panel1.TabIndex = 6;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(26, 20);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 0;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1726, 1055);
+            this.Controls.Add(this.pnlChildForm);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlSideMenu);
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
@@ -428,6 +462,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.pnlSideMenu.ResumeLayout(false);
+            this.pnlLogo.ResumeLayout(false);
             this.pnlSubMenu1.ResumeLayout(false);
             this.pnlSubMenu2.ResumeLayout(false);
             this.pnlSubMenu3.ResumeLayout(false);
@@ -463,5 +498,8 @@ namespace QuanLyKhachSan.PresentationTier
         private System.Windows.Forms.Button btnPhong4;
         private System.Windows.Forms.Button btnQLPhongL2;
         private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Panel pnlChildForm;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

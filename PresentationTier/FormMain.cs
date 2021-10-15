@@ -57,6 +57,26 @@ namespace QuanLyKhachSan.PresentationTier
             }
         }
 
+        //open Child form
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlChildForm.Controls.Add(childForm);
+            pnlChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+
+
 
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -168,6 +188,11 @@ namespace QuanLyKhachSan.PresentationTier
         private void btnQLPhongL3_Click(object sender, EventArgs e)
         {
             ShowSubMenu(pnlSubMenu3);
+        }
+
+        private void pnlChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
