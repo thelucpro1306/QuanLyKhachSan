@@ -36,40 +36,41 @@ namespace QuanLyKhachSan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //MatKhau matKhau = new MatKhau();
-                List<MatKhauDTO> listMK = matKhauBT.LayDanhSachTaiKhoan();
-                string username = txtTaiKhoan.Text;
-                string password = txtMatKhau.Text;
+            //try
+            //{
+            //    //MatKhau matKhau = new MatKhau();
+            //    List<MatKhauDTO> listMK = matKhauBT.LayDanhSachTaiKhoan();
+            //    string username = txtTaiKhoan.Text;
+            //    string password = txtMatKhau.Text;
 
-                var KiemTra = listMK.Where(s => s.Username.CompareTo(username) == 0).ToList();
-                if(KiemTra.Count > 0)
-                {
-                    if (KiemTra[0].Password.CompareTo(password) == 0)
-                    {
-                        MessageBox.Show("Dang nhap thanh cong");
-                        FormMain formMain = new FormMain();
+            //    var KiemTra = listMK.Where(s => s.Username.CompareTo(username) == 0).ToList();
+            //   // KiemTra.All<u> = true;
+            //    if(KiemTra.Count > 0)
+            //    {
+            //        if (KiemTra[0].Password.CompareTo(password) == 0)
+            //        {
+            //            MessageBox.Show("Dang nhap thanh cong");
+            //            FormMain formMain = new FormMain();
                         
-                        formMain.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        lblError.Visible = true;
-                    }
-                }
-                else
-                {
-                    lblError.Visible = true;
-                }
+            //            formMain.Show();
+            //            this.Hide();
+            //        }
+            //        else
+            //        {
+            //            lblError.Visible = true;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        lblError.Visible = true;
+            //    }
 
-            }
-            catch (Exception ex)
-            {
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show("Loi: " + ex);
-            }
+            //    MessageBox.Show("Loi: " + ex);
+            //}
         }
 
         private void txtTaiKhoan_MouseLeave(object sender, EventArgs e)
