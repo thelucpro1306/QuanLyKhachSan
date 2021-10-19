@@ -12,7 +12,6 @@ namespace QuanLyKhachSan.DataContext
         {
         }
 
-        public virtual DbSet<Booking> Booking { get; set; }
         public virtual DbSet<ChiTietHoaDon> ChiTietHoaDon { get; set; }
         public virtual DbSet<DichVu> DichVu { get; set; }
         public virtual DbSet<HoaDon> HoaDon { get; set; }

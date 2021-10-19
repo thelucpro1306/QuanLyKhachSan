@@ -83,6 +83,16 @@ namespace QuanLyKhachSan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoHotel {
+            get {
+                object obj = ResourceManager.GetObject("logoHotel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap squarequick_201641122514485 {
             get {
                 object obj = ResourceManager.GetObject("squarequick_201641122514485", resourceCulture);

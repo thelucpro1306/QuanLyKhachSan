@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace QuanLyKhachSan.PresentationTier
 {
     public partial class FormMain : Form
     {
+
+        //FormPhongL1 formPhongL1;
         public FormMain()
         {
             InitializeComponent();
             CustomizeDesing();
+            //formPhongL1 = new FormPhongL1();
         }
 
         private void CustomizeDesing()
@@ -61,18 +66,25 @@ namespace QuanLyKhachSan.PresentationTier
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
-            if(activeForm != null)
+            try
             {
-                activeForm.Close();
+                if (activeForm != null)
+                {
+                    activeForm.Close();
+                }
+                activeForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                pnlChildForm.Controls.Add(childForm);
+                pnlChildForm.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
             }
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            pnlChildForm.Controls.Add(childForm);
-            pnlChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Loi: " + ex);
+            }
         }
 
 
@@ -121,7 +133,8 @@ namespace QuanLyKhachSan.PresentationTier
 
         private void btnQLPhongL1_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlSubMenu1);
+            openChildForm(new FormPhongL1());
+            ShowSubMenu(pnlSubMenu1);            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -192,7 +205,7 @@ namespace QuanLyKhachSan.PresentationTier
 
         private void pnlChildForm_Paint(object sender, PaintEventArgs e)
         {
-
+            //openChildForm(FormPhongL1());
         }
     }
 }

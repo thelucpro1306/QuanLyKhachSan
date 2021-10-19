@@ -16,5 +16,42 @@ namespace QuanLyKhachSan.PresentationTier
         {
             InitializeComponent();
         }
+
+        private void FormPhongL1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChiTiet1_Click(object sender, EventArgs e)
+        {
+            FormChiTietPhong formChiTietPhong = new FormChiTietPhong();
+            formChiTietPhong.Show();
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

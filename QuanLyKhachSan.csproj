@@ -59,7 +59,6 @@
     <Compile Include="CustomControls\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DataContext\Booking.cs" />
     <Compile Include="DataContext\ChiTietHoaDon.cs" />
     <Compile Include="DataContext\DichVu.cs" />
     <Compile Include="DataContext\HoaDon.cs" />
@@ -74,6 +73,12 @@
     <Compile Include="DataContext\VatTu.cs" />
     <Compile Include="DataTier\MatKhauDT.cs" />
     <Compile Include="DTO\MatKhauDTO.cs" />
+    <Compile Include="PresentationTier\FormChiTietPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationTier\FormChiTietPhong.Designer.cs">
+      <DependentUpon>FormChiTietPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationTier\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationTier\FormChiTietPhong.resx">
+      <DependentUpon>FormChiTietPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationTier\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-x-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoHotel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

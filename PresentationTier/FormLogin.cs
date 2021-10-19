@@ -21,6 +21,8 @@ namespace QuanLyKhachSan
         {
             matKhauBT = new MatKhauBT();
             //lblError.Visible = false;
+            
+            
             InitializeComponent();
         }
 

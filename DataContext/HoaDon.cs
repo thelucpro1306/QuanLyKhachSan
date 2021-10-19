@@ -35,8 +35,6 @@ namespace QuanLyKhachSan.DataContext
 
         public int? TongTien { get; set; }
 
-        public int? BookingID { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDon { get; set; }
 
