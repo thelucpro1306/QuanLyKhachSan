@@ -486,7 +486,6 @@ namespace QuanLyKhachSan.PresentationTier
             this.pnlChildForm.Name = "pnlChildForm";
             this.pnlChildForm.Size = new System.Drawing.Size(1620, 914);
             this.pnlChildForm.TabIndex = 7;
-            this.pnlChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChildForm_Paint);
             // 
             // panel1
             // 
@@ -514,6 +513,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.Text = "FormMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.pnlSideMenu.ResumeLayout(false);
