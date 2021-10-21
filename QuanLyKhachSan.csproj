@@ -73,6 +73,7 @@
     <Compile Include="DataContext\VatTu.cs" />
     <Compile Include="DataTier\MatKhauDT.cs" />
     <Compile Include="DTO\MatKhauDTO.cs" />
+    <Compile Include="LIbs\Helper.cs" />
     <Compile Include="PresentationTier\FomQuanLyPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>

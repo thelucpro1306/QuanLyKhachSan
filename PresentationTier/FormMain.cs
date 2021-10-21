@@ -133,9 +133,9 @@ namespace QuanLyKhachSan.PresentationTier
 
         private void btnQLPhongL1_Click(object sender, EventArgs e)
         {
-            //openChildForm(new FormPhongL1());
-            //ShowSubMenu(pnlSubMenu1);
-            pnlChildForm.Controls.Add(new UserControl1());
+            openChildForm(new FormPhongL1());
+            ShowSubMenu(pnlSubMenu1);
+            //pnlChildForm.Controls.Add(new UserControl1());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -161,9 +161,9 @@ namespace QuanLyKhachSan.PresentationTier
 
         private void btnQLPhongL2_Click(object sender, EventArgs e)
         {
-            // ShowSubMenu(pnlSubMenu2);
-            pnlChildForm.Controls.Clear();
-            pnlChildForm.Controls.Add(new UserControl2());
+            ShowSubMenu(pnlSubMenu2);
+            //pnlChildForm.Controls.Clear();
+            //pnlChildForm.Controls.Add(new UserControl2());
         }
 
         private void btnPhong4_Click(object sender, EventArgs e)
@@ -214,9 +214,9 @@ namespace QuanLyKhachSan.PresentationTier
         private void FormMain_Load(object sender, EventArgs e)
         {
             // chọn chức năng 1 thì panel add form chức năng 1
-            pnlChildForm.Controls.Add(new FomQuanLyPhong());
+            //pnlChildForm.Controls.Add(new FomQuanLyPhong());
 
-            pnlChildForm.Controls.Clear();
+            //pnlChildForm.Controls.Clear();
             // chọn chức năng 2 thì panel add form chức năng 2
         }
     }

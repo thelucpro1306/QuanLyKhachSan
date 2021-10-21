@@ -1,5 +1,5 @@
 ﻿using QuanLyKhachSan.DataContext;
-using QuanLyKhachSan.DTO;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +10,11 @@ namespace QuanLyKhachSan.DataTier
 {
     class MatKhauDT
     {
-        public List<MatKhauDTO> LayDanhSachTaiKhoan()
+        public MatKhau LayDanhSachTaiKhoan(string tenDangNhap, string matKhau)
         {
             using (var dbContext = new QLKSModel())
             {
-                return (from tk in dbContext.MatKhau
-                        select new MatKhauDTO() {
-                            Username = tk.username,
-                            Password = tk.password
-                        }).ToList();
+                return dbContext.MatKhau.Where(s => s.username == tenDangNhap && s.password == matKhau).FirstOrDefault();
             }
         }
     }

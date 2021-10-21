@@ -1,6 +1,7 @@
 ﻿using QuanLyKhachSan.DataContext;
 using QuanLyKhachSan.DataTier;
-using QuanLyKhachSan.DTO;
+
+using QuanLyKhachSan.LIbs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,10 @@ namespace QuanLyKhachSan.BussinessTier
             matKhauDT = new MatKhauDT();
         }
 
-        public List<MatKhauDTO> LayDanhSachTaiKhoan()
+        public MatKhau LayTaiKhoan(string tenDangNhap, string matKhau)
         {
-            return matKhauDT.LayDanhSachTaiKhoan();
+            matKhau = Helper.MaHoaMd5(matKhau);
+            return matKhauDT.LayDanhSachTaiKhoan(tenDangNhap, matKhau);
         }
 
     }
