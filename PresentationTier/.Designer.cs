@@ -185,6 +185,7 @@ namespace QuanLyKhachSan
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
+            this.Load += new System.EventHandler(this.formLogin_Load);
             this.MouseHover += new System.EventHandler(this.formLogin_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

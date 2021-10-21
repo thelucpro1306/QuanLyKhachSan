@@ -100,32 +100,35 @@ namespace QuanLyKhachSan
             try
             {
                 //MatKhau matKhau = new MatKhau();
-                List<MatKhauDTO> listMK = matKhauBT.LayDanhSachTaiKhoan();
-                string username = txtTaiKhoan.Text;
-                string password = txtMatKhau.Text;
-
-                var KiemTra = listMK.Where(s => s.Username.CompareTo(username) == 0).ToList();
-                if (KiemTra.Count > 0)
+                if (string.IsNullOrEmpty(txtTaiKhoan.Text))
                 {
-                    if (KiemTra[0].Password.CompareTo(password) == 0)
-                    {
-                        MessageBox.Show("Dang nhap thanh cong");
-                        FormMain formMain = new FormMain();
+                    MessageBox.Show("Vui long nhap ten dang nhap!!");
+                    return;
+                }
+                if (string.IsNullOrEmpty(txtMatKhau.Text))
+                {
+                    MessageBox.Show("Vui long nhap mat khau!!");
+                    return;
+                }
 
-                        formMain.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        lblError.Visible = true;
-                    }
+                string tenDangNhap = txtTaiKhoan.Text;
+                string matKhau = txtMatKhau.Text;
+                MatKhau taiKhoan = matKhauBT.LayTaiKhoan(tenDangNhap, matKhau);
+                if (taiKhoan != null)
+                {
+                    MessageBox.Show("Dang nhap thanh cong !!!");
+                    FormMain formMain = new FormMain();
+                    formMain.Show();
+                    
+                    this.Hide();
                 }
                 else
                 {
                     lblError.Visible = true;
                 }
-
             }
+
+            
             catch (Exception ex)
             {
 
@@ -175,6 +178,11 @@ namespace QuanLyKhachSan
             Label theLabel = (Label)sender;
             lblThoat = theLabel;
             this.Close();
+        }
+
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
