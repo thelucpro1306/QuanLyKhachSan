@@ -38,6 +38,11 @@ namespace QuanLyKhachSan.DataContext
                 .Property(e => e.QuocTich)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<KhachHang>()
+                .Property(e => e.CCCD)
+                .IsFixedLength()
+                .IsUnicode(false);
+
             modelBuilder.Entity<LichLamViec>()
                 .Property(e => e.Ngay)
                 .IsUnicode(false);

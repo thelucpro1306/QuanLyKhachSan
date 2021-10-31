@@ -1,5 +1,4 @@
 ﻿using QuanLyKhachSan.DataContext;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan.DataTier
 {
-    class MatKhauDT
+    class TaiKhoanDT
     {
-        public MatKhau LayDanhSachTaiKhoan(string tenDangNhap, string matKhau)
+        public MatKhau LayTaiKhoan(string tenDangNhap, string matKhau)
         {
             using (var dbContext = new QLKSModel())
             {

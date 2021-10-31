@@ -5,6 +5,7 @@ namespace QuanLyKhachSan.DataContext
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("KhachHang")]
     public partial class KhachHang
@@ -23,7 +24,33 @@ namespace QuanLyKhachSan.DataContext
         [StringLength(50)]
         public string QuocTich { get; set; }
 
+        [StringLength(50)]
+        public string CCCD { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDon { get; set; }
+
+        
+    }
+    public partial class KhachHang
+    {
+        public static List<KhachHang> GetAll()
+        {
+            QLKSModel context = new QLKSModel();
+            return context.KhachHang.ToList();
+        }
+        public static KhachHang GetKhachHang(int khachHangId)
+        {
+            QLKSModel context = new QLKSModel();
+            return context.KhachHang.Where(p => p.KhachHangID == khachHangId).FirstOrDefault();
+
+        }
+        public KhachHang InsertUpdate()
+        {
+            QLKSModel context = new QLKSModel();
+            KhachHang kh = context.KhachHang.Add(this);
+            context.SaveChanges();
+            return kh;
+        }
     }
 }

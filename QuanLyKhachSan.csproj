@@ -39,6 +39,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -55,7 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BussinessTier\MatKhauBT.cs" />
+    <Compile Include="BusinessTier\TaiKhoanBT.cs" />
     <Compile Include="CustomControls\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -71,20 +89,32 @@
     <Compile Include="DataContext\QLKSModel.cs" />
     <Compile Include="DataContext\sysdiagrams.cs" />
     <Compile Include="DataContext\VatTu.cs" />
-    <Compile Include="DataTier\MatKhauDT.cs" />
-    <Compile Include="DTO\MatKhauDTO.cs" />
+    <Compile Include="DataTier\TaiKhoanDT.cs" />
+    <Compile Include="HoaDonReport.cs" />
     <Compile Include="LIbs\Helper.cs" />
-    <Compile Include="PresentationTier\FomQuanLyPhong.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="PresentationTier\FormBaoCao.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationTier\FomQuanLyPhong.Designer.cs">
-      <DependentUpon>FomQuanLyPhong.cs</DependentUpon>
+    <Compile Include="PresentationTier\FormBaoCao.Designer.cs">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationTier\FormChiTietPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationTier\FormChiTietPhong.Designer.cs">
       <DependentUpon>FormChiTietPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationTier\FormDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationTier\FormDichVu.Designer.cs">
+      <DependentUpon>FormDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationTier\FormLichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationTier\FormLichLamViec.Designer.cs">
+      <DependentUpon>FormLichLamViec.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationTier\FormLogin.cs">
       <SubType>Form</SubType>
@@ -99,31 +129,56 @@
     <Compile Include="PresentationTier\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationTier\FormPhongL1.cs">
+    <Compile Include="PresentationTier\FormNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationTier\FormPhongL1.Designer.cs">
-      <DependentUpon>FormPhongL1.cs</DependentUpon>
+    <Compile Include="PresentationTier\FormNhanVien.Designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationTier\UserControl1.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="PresentationTier\FormPhong.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationTier\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="PresentationTier\FormPhong.Designer.cs">
+      <DependentUpon>FormPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationTier\UserControl2.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="PresentationTier\FormQuanLyKhachHang.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationTier\UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <Compile Include="PresentationTier\FormQuanLyKhachHang.Designer.cs">
+      <DependentUpon>FormQuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationTier\FormQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationTier\FormQuanLyNhanVien.Designer.cs">
+      <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationTier\FormQuanLyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationTier\FormQuanLyPhong.Designer.cs">
+      <DependentUpon>FormQuanLyPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationTier\FormVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationTier\FormVatTu.Designer.cs">
+      <DependentUpon>FormVatTu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PresentationTier\FomQuanLyPhong.resx">
-      <DependentUpon>FomQuanLyPhong.cs</DependentUpon>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="PresentationTier\FormBaoCao.resx">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationTier\FormChiTietPhong.resx">
       <DependentUpon>FormChiTietPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationTier\FormDichVu.resx">
+      <DependentUpon>FormDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationTier\FormLichLamViec.resx">
+      <DependentUpon>FormLichLamViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationTier\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -131,14 +186,23 @@
     <EmbeddedResource Include="PresentationTier\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationTier\FormPhongL1.resx">
-      <DependentUpon>FormPhongL1.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationTier\FormNhanVien.resx">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationTier\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationTier\FormPhong.resx">
+      <DependentUpon>FormPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationTier\UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationTier\FormQuanLyKhachHang.resx">
+      <DependentUpon>FormQuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationTier\FormQuanLyNhanVien.resx">
+      <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationTier\FormQuanLyPhong.resx">
+      <DependentUpon>FormQuanLyPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationTier\FormVatTu.resx">
+      <DependentUpon>FormVatTu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,7 +214,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reporting\ReportBaoCao.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HoaDonReport.datasource" />
+    <None Include="Properties\DataSources\QuanLyKhachSan.DataContext.HoaDon.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,6 +242,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoHotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saving-icon-27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

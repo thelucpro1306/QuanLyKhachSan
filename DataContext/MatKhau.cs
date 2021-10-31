@@ -15,5 +15,9 @@ namespace QuanLyKhachSan.DataContext
 
         [StringLength(50)]
         public string password { get; set; }
+
+        public int? NhanVienID { get; set; }
+
+        public virtual NhanVien NhanVien { get; set; }
     }
 }

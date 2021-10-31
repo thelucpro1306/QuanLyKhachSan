@@ -5,6 +5,7 @@ namespace QuanLyKhachSan.DataContext
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("LoaiPhong")]
     public partial class LoaiPhong
@@ -22,5 +23,20 @@ namespace QuanLyKhachSan.DataContext
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Phong> Phong { get; set; }
+
+
+    }
+    public partial class LoaiPhong
+    {
+        public static List<LoaiPhong> GetAll()
+        {
+            QLKSModel context = new QLKSModel();
+            return context.LoaiPhong.ToList();
+        }
+        public static LoaiPhong GetLoaiPhong(int idLoaiPhong)
+        {
+            QLKSModel context = new QLKSModel();
+            return context.LoaiPhong.Where(p => p.LoaiPhongID == idLoaiPhong).FirstOrDefault();
+        }
     }
 }
