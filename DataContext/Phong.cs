@@ -5,6 +5,7 @@ namespace QuanLyKhachSan.DataContext
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("Phong")]
     public partial class Phong
@@ -26,4 +27,26 @@ namespace QuanLyKhachSan.DataContext
 
         public virtual LoaiPhong LoaiPhong { get; set; }
     }
+
+    public partial class Phong
+    {
+        public static List<Phong> GetAll()
+        {
+            QLKSModel context = new QLKSModel();
+            return context.Phong.ToList();
+        }
+        public static List<Phong> GetAll(int loaiPhong)
+        {
+            QLKSModel context = new QLKSModel();
+            return context.Phong.Where(p => p.LoaiPhongID == loaiPhong).ToList();
+        }
+        public static Phong GetPhong(int vatTuId)
+        {
+            QLKSModel context = new QLKSModel();
+            return context.Phong.Where(p => p.PhongID == vatTuId).FirstOrDefault();
+
+        }
+
+    }
+
 }

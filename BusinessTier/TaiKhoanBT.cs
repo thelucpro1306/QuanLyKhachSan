@@ -1,6 +1,5 @@
 ﻿using QuanLyKhachSan.DataContext;
 using QuanLyKhachSan.DataTier;
-
 using QuanLyKhachSan.LIbs;
 using System;
 using System.Collections.Generic;
@@ -8,21 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyKhachSan.BussinessTier
+namespace QuanLyKhachSan.BusinessTier
 {
-    class MatKhauBT
+    class TaiKhoanBT
     {
-        private readonly MatKhauDT matKhauDT;
-        public MatKhauBT()
+        private readonly TaiKhoanDT taiKhoanDT;
+        public TaiKhoanBT()
         {
-            matKhauDT = new MatKhauDT();
+            taiKhoanDT = new TaiKhoanDT();
         }
-
         public MatKhau LayTaiKhoan(string tenDangNhap, string matKhau)
         {
             matKhau = Helper.MaHoaMd5(matKhau);
-            return matKhauDT.LayDanhSachTaiKhoan(tenDangNhap, matKhau);
+            return taiKhoanDT.LayTaiKhoan(tenDangNhap, matKhau);
         }
-
     }
 }

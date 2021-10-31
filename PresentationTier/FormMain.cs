@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.DataContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,13 +22,12 @@ namespace QuanLyKhachSan.PresentationTier
             InitializeComponent();
             CustomizeDesing();
             formPhongL1 = new FormPhongL1();
+            
         }
 
         private void CustomizeDesing()
         {
             pnlSubMenu1.Visible = false;
-            pnlSubMenu2.Visible = false;
-            pnlSubMenu3.Visible = false;
         }
 
         private void HideSubMenu()
@@ -37,15 +37,6 @@ namespace QuanLyKhachSan.PresentationTier
                 pnlSubMenu1.Visible = false;
             }
 
-            if (pnlSubMenu2.Visible == true)
-            {
-                pnlSubMenu2.Visible = false;
-            }
-
-            if (pnlSubMenu3.Visible == true)
-            {
-                pnlSubMenu3.Visible = false;
-            }
         }
         //
 
@@ -126,10 +117,7 @@ namespace QuanLyKhachSan.PresentationTier
 
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void btnQLPhongL1_Click(object sender, EventArgs e)
         {
@@ -159,12 +147,6 @@ namespace QuanLyKhachSan.PresentationTier
             //HideSubMenu();
         }
 
-        private void btnQLPhongL2_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(pnlSubMenu2);
-            //pnlChildForm.Controls.Clear();
-            //pnlChildForm.Controls.Add(new UserControl2());
-        }
 
         private void btnPhong4_Click(object sender, EventArgs e)
         {
@@ -201,11 +183,6 @@ namespace QuanLyKhachSan.PresentationTier
             //HideSubMenu();
         }
 
-        private void btnQLPhongL3_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(pnlSubMenu3);
-        }
-
         private void pnlChildForm_Paint(object sender, PaintEventArgs e)
         {
             
@@ -218,6 +195,48 @@ namespace QuanLyKhachSan.PresentationTier
 
             //pnlChildForm.Controls.Clear();
             // chọn chức năng 2 thì panel add form chức năng 2
+        }
+
+
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void pnlLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new FormQuanLyPhong());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormQuanLyNhanVien());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormQuanLyKhachHang());
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormBaoCao());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gặp quản lý để biết thêm ");
         }
     }
 }

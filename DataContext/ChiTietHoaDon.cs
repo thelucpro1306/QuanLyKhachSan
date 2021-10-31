@@ -4,7 +4,9 @@ namespace QuanLyKhachSan.DataContext
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Migrations;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("ChiTietHoaDon")]
     public partial class ChiTietHoaDon
@@ -24,5 +26,25 @@ namespace QuanLyKhachSan.DataContext
         public virtual DichVu DichVu { get; set; }
 
         public virtual HoaDon HoaDon { get; set; }
+    }
+    public partial class ChiTietHoaDon
+    {
+        public static List<ChiTietHoaDon> GetAll()
+        {
+            QLKSModel context = new QLKSModel();
+            return context.ChiTietHoaDon.ToList();
+        }
+        public static ChiTietHoaDon GetChiTietHoaDon(int cthdId)
+        {
+            QLKSModel context = new QLKSModel();
+            return context.ChiTietHoaDon.Where(p => p.ChiTietHoaDonID == cthdId).FirstOrDefault();
+
+        }
+        public void InsertUpdate()
+        {
+            QLKSModel context = new QLKSModel();
+            context.ChiTietHoaDon.AddOrUpdate(this);
+            context.SaveChanges();
+        }
     }
 }

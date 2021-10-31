@@ -63,6 +63,16 @@ namespace QuanLyKhachSan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap floppy_disk {
+            get {
+                object obj = ResourceManager.GetObject("floppy-disk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_x_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-x-48", resourceCulture);
@@ -86,6 +96,16 @@ namespace QuanLyKhachSan.Properties {
         internal static System.Drawing.Bitmap logoHotel {
             get {
                 object obj = ResourceManager.GetObject("logoHotel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saving_icon_27 {
+            get {
+                object obj = ResourceManager.GetObject("saving-icon-27", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

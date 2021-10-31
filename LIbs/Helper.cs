@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan.LIbs
 {
-    public static class Helper
+    class Helper
     {
         public static string MaHoaMd5(string text)
         {

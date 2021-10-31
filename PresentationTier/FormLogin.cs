@@ -1,29 +1,25 @@
-﻿using QuanLyKhachSan.BussinessTier;
+﻿
 using QuanLyKhachSan.DataContext;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using QuanLyKhachSan.DTO;
+
 using QuanLyKhachSan.PresentationTier;
 using System.Drawing;
+using QuanLyKhachSan.BusinessTier;
 
 namespace QuanLyKhachSan
 {
-
     public partial class formLogin : Form
     {
-
-        MatKhauBT matKhauBT;
         Label clickedLabel;
+        TaiKhoanBT taiKhoanBT;
         public formLogin()
         {
-            matKhauBT = new MatKhauBT();
-            //lblError.Visible = false;
-            
-            
             InitializeComponent();
+            taiKhoanBT = new TaiKhoanBT();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -38,41 +34,7 @@ namespace QuanLyKhachSan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    //MatKhau matKhau = new MatKhau();
-            //    List<MatKhauDTO> listMK = matKhauBT.LayDanhSachTaiKhoan();
-            //    string username = txtTaiKhoan.Text;
-            //    string password = txtMatKhau.Text;
-
-            //    var KiemTra = listMK.Where(s => s.Username.CompareTo(username) == 0).ToList();
-            //   // KiemTra.All<u> = true;
-            //    if(KiemTra.Count > 0)
-            //    {
-            //        if (KiemTra[0].Password.CompareTo(password) == 0)
-            //        {
-            //            MessageBox.Show("Dang nhap thanh cong");
-            //            FormMain formMain = new FormMain();
-                        
-            //            formMain.Show();
-            //            this.Hide();
-            //        }
-            //        else
-            //        {
-            //            lblError.Visible = true;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        lblError.Visible = true;
-            //    }
-
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show("Loi: " + ex);
-            //}
+           
         }
 
         private void txtTaiKhoan_MouseLeave(object sender, EventArgs e)
@@ -113,13 +75,12 @@ namespace QuanLyKhachSan
 
                 string tenDangNhap = txtTaiKhoan.Text;
                 string matKhau = txtMatKhau.Text;
-                MatKhau taiKhoan = matKhauBT.LayTaiKhoan(tenDangNhap, matKhau);
+                MatKhau taiKhoan = taiKhoanBT.LayTaiKhoan(tenDangNhap, matKhau);
                 if (taiKhoan != null)
                 {
                     MessageBox.Show("Dang nhap thanh cong !!!");
                     FormMain formMain = new FormMain();
                     formMain.Show();
-                    
                     this.Hide();
                 }
                 else
