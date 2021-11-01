@@ -12,8 +12,10 @@ using QuanLyKhachSan.BusinessTier;
 
 namespace QuanLyKhachSan
 {
+   
     public partial class formLogin : Form
     {
+        
         Label clickedLabel;
         TaiKhoanBT taiKhoanBT;
         public formLogin()

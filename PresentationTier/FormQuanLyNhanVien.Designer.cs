@@ -41,6 +41,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.customButton4 = new QuanLyKhachSan.CustomButton.CustomButton();
             this.customButton2 = new QuanLyKhachSan.CustomButton.CustomButton();
             this.btnCapNhatThongTin = new QuanLyKhachSan.CustomButton.CustomButton();
+            this.customButton1 = new QuanLyKhachSan.CustomButton.CustomButton();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -157,7 +158,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(56, 569);
+            this.customButton2.Location = new System.Drawing.Point(56, 425);
             this.customButton2.Name = "customButton2";
             this.customButton2.Size = new System.Drawing.Size(284, 92);
             this.customButton2.TabIndex = 2;
@@ -177,7 +178,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.btnCapNhatThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhatThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatThongTin.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhatThongTin.Location = new System.Drawing.Point(56, 394);
+            this.btnCapNhatThongTin.Location = new System.Drawing.Point(56, 275);
             this.btnCapNhatThongTin.Name = "btnCapNhatThongTin";
             this.btnCapNhatThongTin.Size = new System.Drawing.Size(284, 92);
             this.btnCapNhatThongTin.TabIndex = 2;
@@ -185,6 +186,26 @@ namespace QuanLyKhachSan.PresentationTier
             this.btnCapNhatThongTin.TextColor = System.Drawing.Color.White;
             this.btnCapNhatThongTin.UseVisualStyleBackColor = false;
             this.btnCapNhatThongTin.Click += new System.EventHandler(this.btnCapNhatThongTin_Click);
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton1.BorderColor = System.Drawing.Color.White;
+            this.customButton1.BorderRadius = 25;
+            this.customButton1.BorderSize = 3;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(56, 570);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(284, 92);
+            this.customButton1.TabIndex = 2;
+            this.customButton1.Text = "Cập nhật lịch làm việc";
+            this.customButton1.TextColor = System.Drawing.Color.White;
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton2_Click);
             // 
             // FormQuanLyNhanVien
             // 
@@ -194,6 +215,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1620, 971);
             this.Controls.Add(this.customButton4);
+            this.Controls.Add(this.customButton1);
             this.Controls.Add(this.customButton2);
             this.Controls.Add(this.btnCapNhatThongTin);
             this.Controls.Add(this.label1);
@@ -225,5 +247,6 @@ namespace QuanLyKhachSan.PresentationTier
         private CustomButton.CustomButton btnCapNhatThongTin;
         private CustomButton.CustomButton customButton2;
         private CustomButton.CustomButton customButton4;
+        private CustomButton.CustomButton customButton1;
     }
 }
