@@ -42,7 +42,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(634, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 52);
+            this.label2.Size = new System.Drawing.Size(253, 51);
             this.label2.TabIndex = 1;
             this.label2.Text = "THỐNG KÊ";
             // 
@@ -91,7 +91,8 @@ namespace QuanLyKhachSan.PresentationTier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1620, 1092);
+            this.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.xanh;
+            this.ClientSize = new System.Drawing.Size(1620, 1055);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tableLayoutPanel1);

@@ -965,7 +965,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.lblPhong6.Name = "lblPhong6";
             this.lblPhong6.Size = new System.Drawing.Size(308, 30);
             this.lblPhong6.TabIndex = 0;
-            this.lblPhong6.Text = "Loại phòng: Loại 3";
+            this.lblPhong6.Text = "Loại phòng: Loại 2";
             this.lblPhong6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -1559,7 +1559,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.lblPhong4.Name = "lblPhong4";
             this.lblPhong4.Size = new System.Drawing.Size(308, 30);
             this.lblPhong4.TabIndex = 0;
-            this.lblPhong4.Text = "Loại phòng: Loại 2";
+            this.lblPhong4.Text = "Loại phòng: Loại 1";
             this.lblPhong4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7

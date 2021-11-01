@@ -260,5 +260,10 @@ namespace QuanLyKhachSan.PresentationTier
             }
             txtTongTien.Text = (int.Parse(txtThanhTien.Text) + int.Parse(txtThanhTienDV.Text)).ToString();
         }
+
+        private void txtThanhTienDV_TextChanged(object sender, EventArgs e)
+        {
+            txtTongTien.Text = (int.Parse(txtThanhTien.Text) + int.Parse(txtThanhTienDV.Text)).ToString();
+        }
     }   
 }

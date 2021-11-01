@@ -29,11 +29,6 @@ namespace QuanLyKhachSan.PresentationTier
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlChildForm = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnQLPhongL1 = new System.Windows.Forms.Button();
             this.pnlSubMenu1 = new System.Windows.Forms.Panel();
@@ -47,79 +42,16 @@ namespace QuanLyKhachSan.PresentationTier
             this.btnPhong1 = new System.Windows.Forms.Button();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.pnlChildForm.SuspendLayout();
             this.pnlSubMenu1.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
+            this.pnlChildForm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlChildForm
-            // 
-            this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.pnlChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnlChildForm.Controls.Add(this.button9);
-            this.pnlChildForm.Controls.Add(this.button7);
-            this.pnlChildForm.Controls.Add(this.button3);
-            this.pnlChildForm.Controls.Add(this.button2);
-            this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlChildForm.ForeColor = System.Drawing.Color.Black;
-            this.pnlChildForm.Location = new System.Drawing.Point(300, 0);
-            this.pnlChildForm.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(1620, 971);
-            this.pnlChildForm.TabIndex = 7;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.YellowGreen;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(611, 543);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(391, 317);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "Thống kê";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.YellowGreen;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(611, 128);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(391, 317);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Quản lý nhân viên";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.YellowGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1103, 128);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(391, 317);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Quản lý khách hàng";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.YellowGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(89, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(391, 317);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Quản lý phòng";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // panel1
             // 
@@ -328,6 +260,74 @@ namespace QuanLyKhachSan.PresentationTier
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pnlChildForm
+            // 
+            this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.pnlChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlChildForm.Controls.Add(this.button9);
+            this.pnlChildForm.Controls.Add(this.button7);
+            this.pnlChildForm.Controls.Add(this.button3);
+            this.pnlChildForm.Controls.Add(this.button2);
+            this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChildForm.ForeColor = System.Drawing.Color.Black;
+            this.pnlChildForm.Location = new System.Drawing.Point(300, 0);
+            this.pnlChildForm.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlChildForm.Name = "pnlChildForm";
+            this.pnlChildForm.Size = new System.Drawing.Size(1620, 971);
+            this.pnlChildForm.TabIndex = 7;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.YellowGreen;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(611, 543);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(391, 317);
+            this.button9.TabIndex = 0;
+            this.button9.Text = "Thống kê";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.YellowGreen;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(611, 128);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(391, 317);
+            this.button7.TabIndex = 0;
+            this.button7.Text = "Quản lý nhân viên";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.YellowGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1103, 128);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(391, 317);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Quản lý khách hàng";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.YellowGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(89, 128);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(391, 317);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Quản lý phòng";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // pnlLogo
             // 
             this.pnlLogo.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.logoHotel;
@@ -354,9 +354,9 @@ namespace QuanLyKhachSan.PresentationTier
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
-            this.pnlChildForm.ResumeLayout(false);
             this.pnlSubMenu1.ResumeLayout(false);
             this.pnlSideMenu.ResumeLayout(false);
+            this.pnlChildForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
