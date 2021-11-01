@@ -39,7 +39,6 @@ namespace QuanLyKhachSan.PresentationTier
             this.colTenLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGiaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCapNhatVatTu = new QuanLyKhachSan.CustomButton.CustomButton();
-            this.btnCapNhatLoaiPhong = new QuanLyKhachSan.CustomButton.CustomButton();
             this.btnThoat = new QuanLyKhachSan.CustomButton.CustomButton();
             this.btnCapNhatDichVu = new QuanLyKhachSan.CustomButton.CustomButton();
             this.panel1.SuspendLayout();
@@ -148,25 +147,6 @@ namespace QuanLyKhachSan.PresentationTier
             this.btnCapNhatVatTu.UseVisualStyleBackColor = false;
             this.btnCapNhatVatTu.Click += new System.EventHandler(this.btnCapNhatVatTu_Click);
             // 
-            // btnCapNhatLoaiPhong
-            // 
-            this.btnCapNhatLoaiPhong.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnCapNhatLoaiPhong.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.btnCapNhatLoaiPhong.BorderColor = System.Drawing.Color.White;
-            this.btnCapNhatLoaiPhong.BorderRadius = 21;
-            this.btnCapNhatLoaiPhong.BorderSize = 2;
-            this.btnCapNhatLoaiPhong.FlatAppearance.BorderSize = 0;
-            this.btnCapNhatLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapNhatLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatLoaiPhong.ForeColor = System.Drawing.Color.Aqua;
-            this.btnCapNhatLoaiPhong.Location = new System.Drawing.Point(98, 602);
-            this.btnCapNhatLoaiPhong.Name = "btnCapNhatLoaiPhong";
-            this.btnCapNhatLoaiPhong.Size = new System.Drawing.Size(262, 82);
-            this.btnCapNhatLoaiPhong.TabIndex = 3;
-            this.btnCapNhatLoaiPhong.Text = "CẬP NHẬT LOẠI PHÒNG";
-            this.btnCapNhatLoaiPhong.TextColor = System.Drawing.Color.Aqua;
-            this.btnCapNhatLoaiPhong.UseVisualStyleBackColor = false;
-            // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.RoyalBlue;
@@ -216,7 +196,6 @@ namespace QuanLyKhachSan.PresentationTier
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCapNhatVatTu);
-            this.Controls.Add(this.btnCapNhatLoaiPhong);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnCapNhatDichVu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -235,7 +214,6 @@ namespace QuanLyKhachSan.PresentationTier
         private CustomButton.CustomButton btnCapNhatVatTu;
         private CustomButton.CustomButton btnThoat;
         private CustomButton.CustomButton btnCapNhatDichVu;
-        private CustomButton.CustomButton btnCapNhatLoaiPhong;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvQuanLyPhong;

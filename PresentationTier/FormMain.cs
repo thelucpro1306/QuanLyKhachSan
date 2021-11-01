@@ -22,7 +22,8 @@ namespace QuanLyKhachSan.PresentationTier
             InitializeComponent();
             CustomizeDesing();
             formPhongL1 = new FormPhongL1();
-            
+            button7.Enabled = false;
+            button9.Enabled = false;
         }
 
         private void CustomizeDesing()
@@ -237,6 +238,31 @@ namespace QuanLyKhachSan.PresentationTier
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Gặp quản lý để biết thêm ");
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formLogin frm = new formLogin();
+            frm.Show();
+        }
+
+        private void pnlChildForm_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            FormLoginAdmin frm = new FormLoginAdmin();
+            frm.dangNhapThanhCong += Frm_dangNhapThanhCong;
+            frm.Show();
+        }
+
+        private void Frm_dangNhapThanhCong()
+        {
+            button7.Enabled = true;
+            button9.Enabled = true;
         }
     }
 }

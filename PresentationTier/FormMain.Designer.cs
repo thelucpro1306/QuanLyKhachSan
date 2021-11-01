@@ -30,6 +30,8 @@ namespace QuanLyKhachSan.PresentationTier
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdmin = new QuanLyKhachSan.CustomButton.CustomButton();
+            this.customButton2 = new QuanLyKhachSan.CustomButton.CustomButton();
             this.btnQLPhongL1 = new System.Windows.Forms.Button();
             this.pnlSubMenu1 = new System.Windows.Forms.Panel();
             this.btnPhong8 = new System.Windows.Forms.Button();
@@ -42,12 +44,13 @@ namespace QuanLyKhachSan.PresentationTier
             this.btnPhong1 = new System.Windows.Forms.Button();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.pnlSubMenu1.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
@@ -56,12 +59,52 @@ namespace QuanLyKhachSan.PresentationTier
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.btnAdmin);
+            this.panel1.Controls.Add(this.customButton2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(300, 971);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1620, 79);
             this.panel1.TabIndex = 6;
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAdmin.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAdmin.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAdmin.BorderRadius = 0;
+            this.btnAdmin.BorderSize = 0;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.ForeColor = System.Drawing.Color.White;
+            this.btnAdmin.Location = new System.Drawing.Point(873, 6);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(192, 70);
+            this.btnAdmin.TabIndex = 0;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.TextColor = System.Drawing.Color.White;
+            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
+            // customButton2
+            // 
+            this.customButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButton2.BorderRadius = 0;
+            this.customButton2.BorderSize = 0;
+            this.customButton2.FlatAppearance.BorderSize = 0;
+            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.ForeColor = System.Drawing.Color.White;
+            this.customButton2.Location = new System.Drawing.Point(351, 6);
+            this.customButton2.Name = "customButton2";
+            this.customButton2.Size = new System.Drawing.Size(192, 70);
+            this.customButton2.TabIndex = 0;
+            this.customButton2.Text = "Đăng xuất";
+            this.customButton2.TextColor = System.Drawing.Color.White;
+            this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
             // 
             // btnQLPhongL1
             // 
@@ -260,6 +303,17 @@ namespace QuanLyKhachSan.PresentationTier
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.logoHotel;
+            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(300, 246);
+            this.pnlLogo.TabIndex = 0;
+            this.pnlLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogo_Paint);
+            // 
             // pnlChildForm
             // 
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
@@ -275,13 +329,14 @@ namespace QuanLyKhachSan.PresentationTier
             this.pnlChildForm.Name = "pnlChildForm";
             this.pnlChildForm.Size = new System.Drawing.Size(1620, 971);
             this.pnlChildForm.TabIndex = 7;
+            this.pnlChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChildForm_Paint_1);
             // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.YellowGreen;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(611, 543);
+            this.button9.Location = new System.Drawing.Point(873, 526);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(391, 317);
             this.button9.TabIndex = 0;
@@ -294,7 +349,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.button7.BackColor = System.Drawing.Color.YellowGreen;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(611, 128);
+            this.button7.Location = new System.Drawing.Point(351, 526);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(391, 317);
             this.button7.TabIndex = 0;
@@ -307,7 +362,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.button3.BackColor = System.Drawing.Color.YellowGreen;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1103, 128);
+            this.button3.Location = new System.Drawing.Point(873, 129);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(391, 317);
             this.button3.TabIndex = 0;
@@ -320,24 +375,13 @@ namespace QuanLyKhachSan.PresentationTier
             this.button2.BackColor = System.Drawing.Color.YellowGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(89, 128);
+            this.button2.Location = new System.Drawing.Point(351, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(391, 317);
             this.button2.TabIndex = 0;
             this.button2.Text = "Quản lý phòng";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.logoHotel;
-            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(300, 246);
-            this.pnlLogo.TabIndex = 0;
-            this.pnlLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogo_Paint);
             // 
             // FormMain
             // 
@@ -354,6 +398,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
+            this.panel1.ResumeLayout(false);
             this.pnlSubMenu1.ResumeLayout(false);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
@@ -381,5 +426,7 @@ namespace QuanLyKhachSan.PresentationTier
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private CustomButton.CustomButton customButton2;
+        private CustomButton.CustomButton btnAdmin;
     }
 }

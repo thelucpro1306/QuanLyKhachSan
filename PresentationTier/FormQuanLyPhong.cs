@@ -54,5 +54,10 @@ namespace QuanLyKhachSan.PresentationTier
             FormDichVu frm = new FormDichVu();
             frm.Show();
         }
+
+        private void btnCapNhatLoaiPhong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

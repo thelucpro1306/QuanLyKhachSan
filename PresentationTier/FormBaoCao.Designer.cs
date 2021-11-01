@@ -40,7 +40,7 @@ namespace QuanLyKhachSan.PresentationTier
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(634, 30);
+            this.label2.Location = new System.Drawing.Point(681, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(253, 51);
             this.label2.TabIndex = 1;
@@ -57,7 +57,7 @@ namespace QuanLyKhachSan.PresentationTier
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(26, 30);
+            this.btnThoat.Location = new System.Drawing.Point(109, 64);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(152, 74);
             this.btnThoat.TabIndex = 2;
