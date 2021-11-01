@@ -52,8 +52,9 @@ namespace QuanLyKhachSan.PresentationTier
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(512, 24);
+            this.label1.Location = new System.Drawing.Point(489, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(320, 46);
             this.label1.TabIndex = 0;
@@ -138,6 +139,7 @@ namespace QuanLyKhachSan.PresentationTier
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(28, 159);
             this.label2.Name = "label2";
@@ -148,6 +150,7 @@ namespace QuanLyKhachSan.PresentationTier
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(329, 159);
             this.label3.Name = "label3";
@@ -158,6 +161,7 @@ namespace QuanLyKhachSan.PresentationTier
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(634, 159);
             this.label4.Name = "label4";
@@ -209,6 +213,7 @@ namespace QuanLyKhachSan.PresentationTier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.xanh1;
             this.ClientSize = new System.Drawing.Size(1279, 802);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnSua);

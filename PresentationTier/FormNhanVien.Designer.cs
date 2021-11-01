@@ -41,8 +41,8 @@ namespace QuanLyKhachSan.PresentationTier
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.picAnhNhanVien = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.picAnhNhanVien = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnhNhanVien)).BeginInit();
@@ -164,16 +164,6 @@ namespace QuanLyKhachSan.PresentationTier
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // picAnhNhanVien
-            // 
-            this.picAnhNhanVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picAnhNhanVien.Location = new System.Drawing.Point(906, 37);
-            this.picAnhNhanVien.Name = "picAnhNhanVien";
-            this.picAnhNhanVien.Size = new System.Drawing.Size(368, 210);
-            this.picAnhNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAnhNhanVien.TabIndex = 2;
-            this.picAnhNhanVien.TabStop = false;
-            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(1082, 292);
@@ -183,6 +173,16 @@ namespace QuanLyKhachSan.PresentationTier
             this.button6.Text = "Thoát";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // picAnhNhanVien
+            // 
+            this.picAnhNhanVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picAnhNhanVien.Location = new System.Drawing.Point(896, 76);
+            this.picAnhNhanVien.Name = "picAnhNhanVien";
+            this.picAnhNhanVien.Size = new System.Drawing.Size(368, 210);
+            this.picAnhNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAnhNhanVien.TabIndex = 2;
+            this.picAnhNhanVien.TabStop = false;
             // 
             // FormNhanVien
             // 
